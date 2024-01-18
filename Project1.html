@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Master's</title>
+
+<link rel="stylesheet" href="projectstyle1.css">
+
+</head>
+<body>
+    
+
+  <div class="container">
+    <div class="top">
+      <h1>Plans for Master's</h1>
+      <div class="toggle-btn">
+          <span style="margin: 0.8em;">Live classes</span>
+          <label class="switch">
+              <input type="checkbox" id="checbox" onclick="check()" ; />
+              <span class="slider round"></span>
+          </label>
+           <span style="margin: 0.8em;">Recorded Sessions</span>
+      </div>
+    </div>
+
+    <div class="package-container">
+
+      <div class="packages">
+        <h1>Starter</h1>
+        <h2 class="text1">Basics</h2>
+        <h2 class="text2">Basics</h2>
+        <ul class="list">
+          <li class="first">Subjects
+          <li>Syllabus</li>
+          <li>Concepts</li>
+          <li>Introduction</li>
+        </ul>
+        <a href="#" class="button button1">Start checking Basics</a>
+      </div>
+
+      <div class="packages">
+        <h1>Professional</h1>
+        <h2 class="text1">&dollar;19.99</h2>
+        <h2 class="text2">&dollar;239.99</h2>
+        <ul class="list">
+          <li class="first">Select Subject</li>
+          <li>Learn basics</li>
+          <li>Recorded Sessions</li>
+          <li>PDF files</li>
+        </ul>
+        <a href="#" class="button button2">Get started now</a>
+      </div>
+
+      <div class="packages">
+        <h1>Master</h1>
+        <h2 class="text1">&dollar;29.99</h2>
+        <h2 class="text2">&dollar;359.99</h2>
+        <ul class="list">
+            <li class="first">Live sessions</li>
+            <li>Min Project</li>
+            <li>Major Project</li>
+            <li>Final course submission</li>
+        </ul>
+        <a href="#" class="button button3">Get started now</a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+<script>
+
+function check() 
+{
+  var checkBox = document.getElementById("checbox");
+  var text1 = document.getElementsByClassName("text1");
+  var text2 = document.getElementsByClassName("text2");
+  for (var i = 0; i < text1.length; i++) 
+  {
+    if (checkBox.checked == true) 
+    {
+      text1[i].style.display = "block";
+      text2[i].style.display = "none";
+    } else if (checkBox.checked == false) 
+    {
+      text1[i].style.display = "none";
+      text2[i].style.display = "block";}
+  }
+}
+check();
+
+</script>
+</body>
+</html>
